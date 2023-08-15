@@ -1,0 +1,32 @@
+name: ESLint on Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Info
+        run: |
+          echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+          echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+        shell: bash
+      - name: Check out repository code
+        uses: actions/checkout@v3 
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: |
+          npm install
+          echo "📦 Installing dependencies succeeded"
+      - name: Run ESLint
+        run: |
+          npm run lint
+          echo "🎉 ESLint succeeded"
+        
