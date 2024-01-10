@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
+import { Footer, Navbar } from '@/components';
 
 const fira = Fira_Code({ subsets: ['latin'] });
 
@@ -11,12 +12,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang='en'>
+    <section>
+      <Navbar />
       <body className={`${fira.className} bg-primary-light`}>{children}</body>
-    </html>
+      <Footer />
+    </section>
   );
 }

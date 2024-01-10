@@ -1,12 +1,5 @@
-import { Footer, Navbar } from '@/components';
 import 'remixicon/fonts/remixicon.css';
 
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <main className='text-headline'>TEST</main>
-      <Footer />
-    </>
-  );
+export default function Page() {
+  return <h1 className='text-headline'>TEST</h1>;
 }
