@@ -1,14 +1,20 @@
 'use client';
 
-import { NextComponentType } from 'next';
 import Link from 'next/link';
 
-export const Navbar: NextComponentType = () => {
+type NavbarProps = {
+  title: string;
+  home: string;
+  about: string;
+  contact: string;
+};
+
+export const Navbar = ({ title, home, about, contact }: NavbarProps) => {
   return (
     <nav className='flex h-16 flex-row border-b-[1px] border-lines text-base font-[450] text-secondary-grey'>
       <div className='flex w-auto flex-row items-center whitespace-nowrap'>
         <h2 className='border-r-[1px] border-lines py-5 pl-6 pr-40 hover:cursor-default'>
-          bonea-adrian
+          {title}
         </h2>
         <Link
           href=''

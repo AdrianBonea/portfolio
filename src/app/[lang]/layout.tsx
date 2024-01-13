@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import { Footer, Navbar } from '@/components';
+import { useTranslations } from 'next-intl';
 
 const fira = Fira_Code({ subsets: ['latin'] });
 
@@ -19,10 +20,11 @@ export default function RootLayout({
   children,
   params: { locale },
 }: Readonly<RootLayoutProps>) {
+  const t = useTranslations('Navbar');
   return (
     <html lang={locale}>
       <body className={`${fira.className} bg-primary-light`}>
-        <Navbar />
+        <Navbar title={t('name')} home={''} about={''} contact={''} />
         {children}
         <Footer />
       </body>
