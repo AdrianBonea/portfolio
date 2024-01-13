@@ -30,13 +30,13 @@ export const Navbar = ({
           {home}
         </Link>
         <Link
-          href={`/about`}
+          href='/about'
           className='border-r-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
         >
           {about}
         </Link>
         <Link
-          href=''
+          href='./projects'
           className='border-r-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
         >
           {projects}
@@ -44,7 +44,7 @@ export const Navbar = ({
       </div>
       <div className='flex w-full justify-end  whitespace-nowrap border-lines'>
         <Link
-          href=''
+          href='contact'
           className='border-l-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
         >
           {contact}
