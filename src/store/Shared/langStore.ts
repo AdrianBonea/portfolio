@@ -10,7 +10,5 @@ type Actions = {
 
 export const useLangStore = create<State & Actions>((set) => ({
   lang: 'en',
-  setLang: (lang) => set({ lang }),
+  setLang: (lang: 'en' | 'ro') => set({ lang }),
 }));
-
-
