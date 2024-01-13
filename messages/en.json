@@ -5,5 +5,8 @@
     "about": "_about-me",
     "projects": "_projects",
     "contact": "_contact-me"
+  },
+  "NotFoundPage": {
+    "title": "404 Not found"
   }
 }

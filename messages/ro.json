@@ -5,5 +5,8 @@
     "about": "_despre-mine",
     "projects": "_proiecte",
     "contact": "_contact"
+  },
+  "NotFoundPage": {
+    "title": "404 Pagina nu exista"
   }
 }

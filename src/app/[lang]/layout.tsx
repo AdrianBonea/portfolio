@@ -3,8 +3,9 @@ import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import { Footer, Navbar } from '@/components';
 import { useTranslations } from 'next-intl';
+import { NextFont } from 'next/dist/compiled/@next/font';
 
-const fira = Fira_Code({ subsets: ['latin'] });
+const fira: NextFont = Fira_Code({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next',
@@ -13,16 +14,17 @@ export const metadata: Metadata = {
 
 type RootLayoutProps = {
   children: React.ReactNode;
-  params: { locale: 'en' | 'ro' };
+  params: { locale: 'en' | 'ro'; lang: 'en' | 'ro' };
 };
 
 export default function RootLayout({
   children,
-  params: { locale },
+  params: { locale, lang },
 }: Readonly<RootLayoutProps>) {
   const t = useTranslations('Navbar');
+  console.log(lang);
   return (
-    <html lang={locale}>
+    <html lang={lang}>
       <body className={`${fira.className} bg-primary-light`}>
         <Navbar
           title={t('name')}

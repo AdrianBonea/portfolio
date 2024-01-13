@@ -24,13 +24,13 @@ export const Navbar = ({
           {title}
         </h2>
         <Link
-          href=''
+          href='./'
           className='border-r-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
         >
           {home}
         </Link>
         <Link
-          href=''
+          href={`/about`}
           className='border-r-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
         >
           {about}
