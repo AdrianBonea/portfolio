@@ -8,5 +8,10 @@
   },
   "NotFoundPage": {
     "title": "404 Not found"
+  },
+  "Footer": {
+    "findMe": "find me in:",
+    "design": "design by: ",
+    "designer": "yanka-darelova"
   }
 }

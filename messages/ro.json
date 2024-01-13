@@ -8,5 +8,10 @@
   },
   "NotFoundPage": {
     "title": "404 Pagina nu exista"
+  },
+  "Footer": {
+    "findMe": "ma gasesti aici:",
+    "design": "design de: ",
+    "designer": "yanka-darelova"
   }
 }

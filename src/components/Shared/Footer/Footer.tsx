@@ -1,4 +1,3 @@
-import { NextComponentType } from 'next';
 import Link from 'next/link';
 
 type GithubData = {
@@ -25,14 +24,20 @@ const getGithubData = async () => {
   return data;
 };
 
-export const Footer: NextComponentType = async () => {
+type FooterProps = {
+  findMe: string;
+  design: string;
+  designer: string;
+};
+
+export const Footer = async ({ findMe, design, designer }: FooterProps) => {
   const githubData: GithubData | undefined = await getGithubData();
 
   return (
     <footer className='absolute bottom-1 w-full text-base font-[450] text-secondary-grey'>
       <div className='flex h-10 flex-row items-center justify-between border-t-[1px] border-lines'>
         <div className='flex w-auto flex-row items-center whitespace-nowrap'>
-          <h2 className='px-4 py-2 hover:cursor-default'>find me in:</h2>
+          <h2 className='px-4 py-2 hover:cursor-default'>{findMe}</h2>
           <Link
             target={'_blank'}
             href={linkedinUrl}
@@ -44,13 +49,13 @@ export const Footer: NextComponentType = async () => {
         </div>
         <div className='flex w-full flex-row items-center justify-end  whitespace-nowrap'>
           <h2 className='overflow-hidden border-l-[1px] border-lines px-4 py-2 hover:cursor-default'>
-            design by:{' '}
+            {design}
             <Link
               href={designUrl}
               target={'_blank'}
               className='text-accent-orange'
             >
-              yanka-darelova
+              {designer}
             </Link>
           </h2>
           <Link

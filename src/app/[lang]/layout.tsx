@@ -1,10 +1,11 @@
-import './globals.css';
-import 'remixicon/fonts/remixicon.css';
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import { Footer, Navbar } from '@/components';
 import { useTranslations } from 'next-intl';
 import { NextFont } from 'next/dist/compiled/@next/font';
+
+import './globals.css';
+import 'remixicon/fonts/remixicon.css';
 
 const fira: NextFont = Fira_Code({ subsets: ['latin'] });
 
@@ -22,20 +23,21 @@ export default function RootLayout({
   children,
   params: { locale },
 }: Readonly<RootLayoutProps>) {
-  const t = useTranslations('Navbar');
+  const t = useTranslations();
+
 
   return (
     <html lang={locale}>
       <body className={`${fira.className} bg-primary-light`}>
         <Navbar
-          title={t('name')}
-          home={t('home')}
-          about={t('about')}
-          contact={t('contact')}
-          projects={t('projects')}
+          title={t('Navbar.name')}
+          home={t('Navbar.home')}
+          about={t('Navbar.about')}
+          contact={t('Navbar.contact')}
+          projects={t('Navbar.projects')}
         />
         {children}
-        <Footer />
+        <Footer findMe={t('Footer.findMe')} design={t('Footer.design')} designer={t('Footer.designer')} />
       </body>
     </html>
   );
