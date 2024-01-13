@@ -1,0 +1,12 @@
+{
+  "Navbar": {
+    "name": "bonea-adrian",
+    "home": "_hello",
+    "about": "_about-me",
+    "projects": "_projects",
+    "contact": "_contact-me"
+  },
+  "NotFoundPage": {
+    "title": "404 Not found"
+  }
+}
