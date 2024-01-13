@@ -1,5 +1,9 @@
 {
   "Navbar": {
-    "name": "bonea-adrian eng"
+    "name": "bonea-adrian eng",
+    "home": "_hello",
+    "about": "_about-me",
+    "projects": "_projects",
+    "contact": "_contact-me"
   }
 }

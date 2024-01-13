@@ -1,5 +1,9 @@
 {
   "Navbar": {
-    "name": "bonea-adrian ro"
+    "name": "bonea-adrian ing",
+    "home": "_buna",
+    "about": "_despre-mine",
+    "projects": "_proiecte",
+    "contact": "_contact"
   }
 }

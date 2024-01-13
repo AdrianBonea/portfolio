@@ -24,7 +24,13 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${fira.className} bg-primary-light`}>
-        <Navbar title={t('name')} home={''} about={''} contact={''} />
+        <Navbar
+          title={t('name')}
+          home={t('home')}
+          about={t('about')}
+          contact={t('contact')}
+          projects={t('projects')}
+        />
         {children}
         <Footer />
       </body>

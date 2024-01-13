@@ -7,9 +7,16 @@ type NavbarProps = {
   home: string;
   about: string;
   contact: string;
+  projects: string;
 };
 
-export const Navbar = ({ title, home, about, contact }: NavbarProps) => {
+export const Navbar = ({
+  title,
+  home,
+  about,
+  contact,
+  projects,
+}: NavbarProps) => {
   return (
     <nav className='flex h-16 flex-row border-b-[1px] border-lines text-base font-[450] text-secondary-grey'>
       <div className='flex w-auto flex-row items-center whitespace-nowrap'>
@@ -20,19 +27,19 @@ export const Navbar = ({ title, home, about, contact }: NavbarProps) => {
           href=''
           className='border-r-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
         >
-          _hello
+          {home}
         </Link>
         <Link
           href=''
           className='border-r-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
         >
-          _about-me
+          {about}
         </Link>
         <Link
           href=''
           className='border-r-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
         >
-          _projects
+          {projects}
         </Link>
       </div>
       <div className='flex w-full justify-end  whitespace-nowrap border-lines'>
@@ -40,7 +47,7 @@ export const Navbar = ({ title, home, about, contact }: NavbarProps) => {
           href=''
           className='border-l-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
         >
-          _contact-me
+          {contact}
         </Link>
       </div>
     </nav>
