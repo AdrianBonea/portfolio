@@ -19,12 +19,12 @@ type RootLayoutProps = {
 
 export default function RootLayout({
   children,
-  params: { locale, lang },
+  params: { locale },
 }: Readonly<RootLayoutProps>) {
   const t = useTranslations('Navbar');
 
   return (
-    <html lang={lang}>
+    <html lang={locale}>
       <body className={`${fira.className} bg-primary-light`}>
         <Navbar
           title={t('name')}
