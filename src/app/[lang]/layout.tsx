@@ -22,7 +22,7 @@ export default function RootLayout({
   params: { locale, lang },
 }: Readonly<RootLayoutProps>) {
   const t = useTranslations('Navbar');
-  console.log(lang);
+
   return (
     <html lang={lang}>
       <body className={`${fira.className} bg-primary-light`}>
