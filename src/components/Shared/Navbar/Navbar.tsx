@@ -1,4 +1,6 @@
-import { NextComponentType} from 'next';
+'use client';
+
+import { NextComponentType } from 'next';
 import Link from 'next/link';
 
 export const Navbar: NextComponentType = () => {
