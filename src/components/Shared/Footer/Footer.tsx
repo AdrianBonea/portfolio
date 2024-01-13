@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { LocaleSwitcher } from './LangButton';
 
 type GithubData = {
   url: string;
@@ -46,6 +47,9 @@ export const Footer = async ({ findMe, design, designer }: FooterProps) => {
             <i className='ri-linkedin-box-fill px-4 py-2 text-3xl hover:text-white'></i>
           </Link>
           {/* <i className='ri-mail-fill border-r-[1px] border-lines px-4 text-3xl'></i> */}
+        </div>
+        <div className='flex w-auto flex-row items-center whitespace-nowrap'>
+          <LocaleSwitcher />
         </div>
         <div className='flex w-full flex-row items-center justify-end  whitespace-nowrap'>
           <h2 className='overflow-hidden border-l-[1px] border-lines px-4 py-2 hover:cursor-default'>

@@ -25,7 +25,6 @@ export default function RootLayout({
 }: Readonly<RootLayoutProps>) {
   const t = useTranslations();
 
-
   return (
     <html lang={locale}>
       <body className={`${fira.className} bg-primary-light`}>
@@ -37,7 +36,11 @@ export default function RootLayout({
           projects={t('Navbar.projects')}
         />
         {children}
-        <Footer findMe={t('Footer.findMe')} design={t('Footer.design')} designer={t('Footer.designer')} />
+        <Footer
+          findMe={t('Footer.findMe')}
+          design={t('Footer.design')}
+          designer={t('Footer.designer')}
+        />
       </body>
     </html>
   );
