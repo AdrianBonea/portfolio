@@ -16,7 +16,7 @@ export const Navbar = ({
   about,
   contact,
   projects,
-}: NavbarProps) => {
+}: NavbarProps): JSX.Element => {
   return (
     <nav className='flex h-16 flex-row border-b-[1px] border-lines text-base font-[450] text-secondary-grey'>
       <div className='flex w-auto flex-row items-center whitespace-nowrap'>
