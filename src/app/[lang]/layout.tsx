@@ -1,4 +1,5 @@
 import './globals.css';
+import 'remixicon/fonts/remixicon.css';
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import { Footer, Navbar } from '@/components';
