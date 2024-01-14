@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       height: {
-        screenMinusNavbar: 'calc(100vh - 64px)',
+        screenMinusNavbar: 'calc(100vh - 128px)',
       },
       fontFamily: {
         fira: ['Fira Code', 'monospace'],
