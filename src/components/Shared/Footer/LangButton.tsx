@@ -3,9 +3,10 @@
 import { usePathname, useParams } from 'next/navigation';
 import Link from 'next/link';
 
+const locales: string[] = ['en', 'ro'];
+
 export function LocaleSwitcher() {
-  const locales = ['en', 'ro'];
-  const pathName = usePathname();
+  const pathName: string = usePathname();
   const { lang } = useParams();
 
   const redirectedPathName = (locale: string) => {
@@ -16,13 +17,13 @@ export function LocaleSwitcher() {
   };
 
   return (
-    <div className='flex flex-row'>
+    <div className='flex h-max flex-row'>
       <ul className='flex flex-row'>
-        {locales.map((locale) => {
+        {locales.map((locale: string) => {
           return (
             <li
               key={locale}
-              className={`pl-2 ${lang === locale && 'text-accent-orange'} ${lang !== locale && 'hover:text-white'} `}
+              className={`px-4 py-2 ${lang === locale && 'text-accent-orange'} ${lang !== locale && 'hover:text-white'} `}
             >
               <Link href={redirectedPathName(locale)}>
                 {locale.toUpperCase()}

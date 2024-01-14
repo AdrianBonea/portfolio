@@ -48,10 +48,11 @@ export const Footer = async ({ findMe, design, designer }: FooterProps) => {
           </Link>
           {/* <i className='ri-mail-fill border-r-[1px] border-lines px-4 text-3xl'></i> */}
         </div>
-        <div className='flex w-auto flex-row items-center whitespace-nowrap'>
-          <LocaleSwitcher />
-        </div>
-        <div className='flex w-full flex-row items-center justify-end  whitespace-nowrap'>
+
+        <div className='flex w-full flex-row items-center justify-end  whitespace-nowrap '>
+          <div className='flex w-auto flex-row items-center whitespace-nowrap border-l-[1px] border-lines'>
+            <LocaleSwitcher />
+          </div>
           <h2 className='overflow-hidden border-l-[1px] border-lines px-4 py-2 hover:cursor-default'>
             {design}
             <Link
