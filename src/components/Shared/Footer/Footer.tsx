@@ -35,7 +35,7 @@ export const Footer = async ({ findMe, design, designer }: FooterProps) => {
   const githubData: GithubData | undefined = await getGithubData();
 
   return (
-    <footer className='absolute bottom-1 w-full text-base font-[450] text-secondary-grey'>
+    <footer className='absolute bottom-1 hidden w-full text-base font-[450] text-secondary-grey lg:block'>
       <div className='flex h-10 flex-row items-center justify-between border-t-[1px] border-lines'>
         <div className='flex w-auto flex-row items-center whitespace-nowrap'>
           <h2 className='px-4 py-2 hover:cursor-default'>{findMe}</h2>
