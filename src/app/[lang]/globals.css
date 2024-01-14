@@ -3,3 +3,46 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+.gameBg {
+  background: linear-gradient(
+    150deg,
+    rgba(23, 85, 83, 0.7) 1.7%,
+    rgba(67, 217, 173, 0.09) 81.82%
+  );
+  box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.3) inset;
+  backdrop-filter: blur(32px);
+  border-radius: 8px;
+  border: 1px solid #0c1616;
+  width: 510px;
+  height: 475px;
+  flex-shrink: 0;
+}
+
+.gradientGreen {
+  background: #43d9ad;
+  width: 454px;
+  height: 492px;
+  transform: rotate(-94.305deg);
+  flex-shrink: 0;
+  fill: #43d9ad;
+  opacity: 0.4;
+  filter: blur(87px);
+  position: absolute;
+  top: -120px;
+  left: -30px;
+}
+
+.gradientPurple {
+  background: #4d5bce;
+  width: 454px;
+  height: 492px;
+  transform: rotate(13.508deg);
+  flex-shrink: 0;
+  fill: #4d5bce;
+  opacity: 0.4;
+  filter: blur(87px);
+  position: absolute;
+  top: 50px;
+  left: 170px;
+}

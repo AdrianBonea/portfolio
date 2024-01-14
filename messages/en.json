@@ -13,5 +13,12 @@
     "findMe": "find me in:",
     "design": "design by: ",
     "designer": "yanka-darelova"
+  },
+  "Homepage": {
+    "presentation": "Hi all. I am",
+    "name": "Bonea Adrian Mirel",
+    "role": "> Front-end developer",
+    "description": "// complete the game to continue",
+    "description2": "// you can also see it on my Github page"
   }
 }
