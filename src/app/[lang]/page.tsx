@@ -1,5 +1,7 @@
-import 'remixicon/fonts/remixicon.css';
+type PageProps = {
+  params: { lang: 'en' | 'ro' };
+};
 
-export default function Page() {
-  return <h1 className='text-headline'>TEST</h1>;
+export default function Page({ params: { lang } }: Readonly<PageProps>) {
+  return <button className='text-headline'>FR</button>;
 }
