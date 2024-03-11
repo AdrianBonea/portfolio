@@ -16,18 +16,18 @@ export const metadata: Metadata = {
 
 type RootLayoutProps = {
   children: React.ReactNode;
-  params: { locale: 'en' | 'ro'; lang: 'en' | 'ro' };
+  params: { lang: 'en' | 'ro' };
 };
 
 export default function RootLayout({
   children,
-  params: { locale },
+  params: { lang },
 }: Readonly<RootLayoutProps>) {
   const t = useTranslations();
 
   return (
-    <html lang={locale}>
-      <body className={`${fira.className} bg-primary-light`}>
+    <html lang={lang}>
+      <body className={`${fira.className} w-full bg-primary-light`}>
         <Navbar
           title={t('Navbar.name')}
           home={t('Navbar.home')}

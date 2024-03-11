@@ -1,11 +1,7 @@
 import { Homepage } from '@/components';
 import { useTranslations } from 'next-intl';
 
-type PageProps = {
-  params: { lang: 'en' | 'ro' };
-};
-
-export default function Page({ params: { lang } }: Readonly<PageProps>) {
+export default function Page() {
   const t = useTranslations();
   return (
     <Homepage
