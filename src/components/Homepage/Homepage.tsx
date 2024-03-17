@@ -49,9 +49,9 @@ export const Homepage = ({
         </div>
       </section>
 
-      <section className='gameBg flex hidden h-96 w-96 xl:ml-16 xl:flex'>
+      <section className='gameBg hidden h-96 xl:ml-16  xl:flex'>
         <div className='gradientGreen'></div>
-        <div className='gradientPurple'></div>
+        <div className='gradientPurple overscroll-contain'></div>
       </section>
     </HomePageWrapper>
   );
