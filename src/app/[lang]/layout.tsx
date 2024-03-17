@@ -34,6 +34,7 @@ export default function RootLayout({
           about={t('Navbar.about')}
           contact={t('Navbar.contact')}
           projects={t('Navbar.projects')}
+          findMe={t('Footer.findMe')}
         />
         {children}
         <Footer

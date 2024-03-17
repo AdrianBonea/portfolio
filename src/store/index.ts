@@ -1,1 +1,1 @@
-export { useLangStore } from '@/store/Shared/langStore';
+export { useMenuStore } from '@/store/Shared/menuStore';

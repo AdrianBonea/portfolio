@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import { LocaleSwitcher } from './LangButton';
+import { designUrl, gitUrl, linkedinUrl } from '@/constants/Shared/urls';
 
 type GithubData = {
   url: string;
   name: string;
 };
-
-const linkedinUrl = 'https://www.linkedin.com/in/adrian-mirel-bonea/';
-const gitUrl = 'https://api.github.com/users/AdrianBonea';
-const designUrl = 'https://www.behance.net/darelova';
 
 const getGithubData = async () => {
   const response: Response = await fetch(gitUrl, {

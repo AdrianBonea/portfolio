@@ -1,26 +1,30 @@
-'use client';
-
 import Link from 'next/link';
 
-type HamburgerProps = {
+type NavbarInHeaderProps = {
+  isOpen: boolean;
   title: string;
   home: string;
   about: string;
-  contact: string;
   projects: string;
+  contact: string;
+  setOpen: () => void;
 };
 
-export const HambugerMenu = ({
+const NavbarInHeader = ({
+  isOpen,
   title,
   home,
   about,
-  contact,
   projects,
-}: HamburgerProps): JSX.Element => {
+  contact,
+  setOpen,
+}: NavbarInHeaderProps) => {
   return (
-    <nav className='flex h-16 flex-row  border-b-[1px] border-lines text-base font-[450] text-secondary-grey '>
-      <div className='flex w-auto flex-row items-center whitespace-nowrap'>
-        <h2 className='border-lines py-5 pl-6 hover:cursor-default lg:border-r-[1px] lg:pr-40'>
+    <>
+      <div
+        className={`w-auto flex-row items-center whitespace-nowrap ${isOpen ? 'hidden' : 'flex'}`}
+      >
+        <h2 className='hidden border-lines py-5 pl-6 hover:cursor-default lg:flex lg:border-r-[1px] lg:pr-40'>
           {title}
         </h2>
         <Link
@@ -50,13 +54,23 @@ export const HambugerMenu = ({
           {contact}
         </Link>
       </div>
-
+      <h2
+        className={`whitespace-nowrap border-lines py-5 pl-6 hover:cursor-default lg:hidden lg:border-r-[1px] lg:pr-40 ${
+          isOpen ? 'hidden' : 'flex'
+        }`}
+      >
+        {title}
+      </h2>
       <button
-        className='flex w-full justify-end whitespace-nowrap border-lines lg:hidden'
-        onClick={() => console.log('press me harder')}
+        className={`${
+          isOpen ? 'hidden' : 'flex'
+        } w-full justify-end whitespace-nowrap border-lines lg:hidden`}
+        onClick={setOpen}
       >
         <i className='ri-menu-fill px-8 py-5 text-body hover:border-b-accent-orange hover:text-white'></i>
       </button>
-    </nav>
+    </>
   );
 };
+
+export { NavbarInHeader };
