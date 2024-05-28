@@ -1,7 +1,7 @@
 import { gitProfileUrl, linkedinUrl } from '@/constants/Shared/urls';
 import Link from 'next/link';
 import { LocaleSwitcher } from '../Footer/LangButton';
-import { HamburgerIcon } from '../Icons/hamburgerIcon';
+import { HamburgerIcon } from '../Icons/HamburgerIcon';
 
 type NavbarHamburgerProps = {
   isOpen: boolean;

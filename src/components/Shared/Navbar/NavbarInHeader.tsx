@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { HamburgerIcon } from '../Icons/hamburgerIcon';
+import { HamburgerIcon } from '../Icons/HamburgerIcon';
 
 type NavbarInHeaderProps = {
   isOpen: boolean;
