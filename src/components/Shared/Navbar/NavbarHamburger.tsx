@@ -1,6 +1,7 @@
 import { gitProfileUrl, linkedinUrl } from '@/constants/Shared/urls';
 import Link from 'next/link';
 import { LocaleSwitcher } from '../Footer/LangButton';
+import { HamburgerIcon } from '../Icons/hamburgerIcon';
 
 type NavbarHamburgerProps = {
   isOpen: boolean;
@@ -37,7 +38,7 @@ const NavbarHamburger = ({
           className={`whitespace-nowrap border-lines lg:hidden`}
           onClick={setOpen}
         >
-          <i className='ri-menu-fill px-8 py-5 text-body hover:border-b-accent-orange hover:text-white'></i>
+          <HamburgerIcon />
         </button>
       </div>
       <Link

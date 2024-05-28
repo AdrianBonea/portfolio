@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { HamburgerIcon } from '../Icons/hamburgerIcon';
 
 type NavbarInHeaderProps = {
   isOpen: boolean;
@@ -67,7 +68,7 @@ const NavbarInHeader = ({
         } w-full justify-end whitespace-nowrap border-lines lg:hidden`}
         onClick={setOpen}
       >
-        <i className='ri-menu-fill px-8 py-5 text-body hover:border-b-accent-orange hover:text-white'></i>
+        <HamburgerIcon />
       </button>
     </>
   );
