@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import { Footer, Navbar } from '@/components';
-import { useTranslations } from 'next-intl';
+import { NextIntlClientProvider, useTranslations } from 'next-intl';
 import { NextFont } from 'next/dist/compiled/@next/font';
 
 import './globals.css';
@@ -28,20 +28,22 @@ export default function RootLayout({
   return (
     <html lang={lang}>
       <body className={`${fira.className} w-full bg-primary-light`}>
-        <Navbar
-          title={t('Navbar.name')}
-          home={t('Navbar.home')}
-          about={t('Navbar.about')}
-          contact={t('Navbar.contact')}
-          projects={t('Navbar.projects')}
-          findMe={t('Footer.findMe')}
-        />
-        {children}
-        <Footer
-          findMe={t('Footer.findMe')}
-          design={t('Footer.design')}
-          designer={t('Footer.designer')}
-        />
+        <NextIntlClientProvider>
+          <Navbar
+            title={t('Navbar.name')}
+            home={t('Navbar.home')}
+            about={t('Navbar.about')}
+            contact={t('Navbar.contact')}
+            projects={t('Navbar.projects')}
+            findMe={t('Footer.findMe')}
+          />
+          {children}
+          <Footer
+            findMe={t('Footer.findMe')}
+            design={t('Footer.design')}
+            designer={t('Footer.designer')}
+          />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

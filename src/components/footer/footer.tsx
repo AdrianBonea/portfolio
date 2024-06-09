@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { LocaleSwitcher } from './LangButton';
+import { LocaleSwitcher } from '../lang-switcher/lang-switcher';
 import { designUrl, gitUrl, linkedinUrl } from '@/constants/Shared/urls';
 
 type GithubData = {

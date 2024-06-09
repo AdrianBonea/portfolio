@@ -1,16 +1,14 @@
 import createMiddleware from 'next-intl/middleware';
 
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ['en', 'ro'],
+import { localePrefix, locales } from './navigation';
 
-  // Used when no locale matches
+export default createMiddleware({
+  locales,
+  localePrefix,
   defaultLocale: 'en',
-  localePrefix: 'always',
-  localeDetection: false,
 });
 
+// only applies this middleware to files in the app directory
 export const config = {
-  // Match only internationalized pathnames
   matcher: ['/', '/(ro|en)/:path*', '/((?!_next|_vercel|.*\\..*).*)'],
 };

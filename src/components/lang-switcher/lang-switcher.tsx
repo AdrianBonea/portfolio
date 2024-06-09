@@ -1,20 +1,13 @@
 'use client';
-
-import { usePathname, useParams } from 'next/navigation';
-import Link from 'next/link';
+import { usePathname, useRouter } from '@/navigation';
+import { useLocale } from 'next-intl';
 
 const locales: string[] = ['en', 'ro'];
 
 export function LocaleSwitcher() {
-  const pathName: string = usePathname();
-  const { lang } = useParams();
-
-  const redirectedPathName = (locale: string) => {
-    if (!pathName) return '/';
-    const segments = pathName.split('/');
-    segments[1] = locale;
-    return segments.join('/');
-  };
+  const lang = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <div className='flex h-max flex-row'>
@@ -25,9 +18,14 @@ export function LocaleSwitcher() {
               key={locale}
               className={`px-4 py-2 ${lang === locale && 'text-accent-orange'} ${lang !== locale && 'hover:text-white'} `}
             >
-              <Link href={redirectedPathName(locale)}>
+              <button
+                onClick={() => {
+                  console.log(locale);
+                  router.push(pathname, { locale });
+                }}
+              >
                 {locale.toUpperCase()}
-              </Link>
+              </button>
             </li>
           );
         })}

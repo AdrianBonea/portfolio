@@ -1,7 +1,8 @@
 import { gitProfileUrl, linkedinUrl } from '@/constants/Shared/urls';
-import Link from 'next/link';
-import { LocaleSwitcher } from '../Footer/LangButton';
-import { HamburgerIcon } from '../Icons/HamburgerIcon';
+
+import { LocaleSwitcher } from '../lang-switcher/lang-switcher';
+import { HamburgerIcon } from '../icons/hamburger-icon';
+import { Link } from '@/navigation';
 
 type NavbarHamburgerProps = {
   isOpen: boolean;
@@ -28,7 +29,7 @@ const NavbarMobile = ({
     <div
       className={`${
         isOpen ? 'flex' : 'hidden'
-      } z-50 h-screen w-full flex-col overflow-hidden bg-primary-light lg:hidden`}
+      } z-50 h-screen w-full flex-col bg-primary-light lg:hidden`}
     >
       <div className='flex w-full flex-row justify-between border-b-[1px] border-lines'>
         <h2 className='flex whitespace-nowrap border-lines py-5 pl-6 hover:cursor-default lg:border-r-[1px] lg:pr-40'>

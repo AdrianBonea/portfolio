@@ -3,8 +3,8 @@
 import { useScreenSize } from '@/hooks';
 import { useMenuStore } from '@/store';
 import { useEffect } from 'react';
-import { NavbarInHeader } from './NavbarDesktop';
-import { NavbarHamburger } from './NavbarMobile';
+import { NavbarInHeader } from './navbar-desktop';
+import { NavbarHamburger } from './navbar-mobile';
 
 type NavbarProps = {
   title: string;
