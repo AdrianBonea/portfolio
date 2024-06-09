@@ -19,6 +19,10 @@
     "name": "Bonea Adrian Mirel",
     "role": "> Front-end developer",
     "description": "// castiga pentru a continua",
-    "description2": "// aici este si pagina de Github"
+    "description2": "// aici este si pagina de Github",
+    "code": {
+      "const": "const ",
+      "gitHubLink": "githubLink"
+    }
   }
 }

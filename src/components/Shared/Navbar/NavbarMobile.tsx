@@ -14,7 +14,7 @@ type NavbarHamburgerProps = {
   findMe: string;
 };
 
-const NavbarHamburger = ({
+const NavbarMobile = ({
   isOpen,
   title,
   setOpen,
@@ -28,7 +28,7 @@ const NavbarHamburger = ({
     <div
       className={`${
         isOpen ? 'flex' : 'hidden'
-      } z-50 h-screen w-full flex-col bg-primary-light lg:hidden`}
+      } z-50 h-screen w-full flex-col overflow-hidden bg-primary-light lg:hidden`}
     >
       <div className='flex w-full flex-row justify-between border-b-[1px] border-lines'>
         <h2 className='flex whitespace-nowrap border-lines py-5 pl-6 hover:cursor-default lg:border-r-[1px] lg:pr-40'>
@@ -96,4 +96,4 @@ const NavbarHamburger = ({
   );
 };
 
-export { NavbarHamburger };
+export { NavbarMobile as NavbarHamburger };

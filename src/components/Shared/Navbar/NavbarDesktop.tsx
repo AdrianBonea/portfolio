@@ -11,7 +11,7 @@ type NavbarInHeaderProps = {
   setOpen: () => void;
 };
 
-const NavbarInHeader = ({
+const NavbarDesktop = ({
   isOpen,
   title,
   home,
@@ -74,4 +74,4 @@ const NavbarInHeader = ({
   );
 };
 
-export { NavbarInHeader };
+export { NavbarDesktop as NavbarInHeader };
