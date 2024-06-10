@@ -46,8 +46,6 @@ export const Navbar = ({
     }
   }, [isOpen]);
 
-  console.log(isOpen, 'isOpen');
-
   return (
     <nav
       className={`flex h-16  border-b-[1px] border-lines text-base font-[450] text-secondary-grey  ${isOpen ? 'h-full flex-col' : 'flex-row'}`}
