@@ -15,6 +15,11 @@ type NavbarHamburgerProps = {
   findMe: string;
 };
 
+type LinksList = {
+  href: string;
+  text: string;
+};
+
 const NavbarMobile = ({
   isOpen,
   title,
@@ -25,6 +30,13 @@ const NavbarMobile = ({
   contact,
   findMe,
 }: NavbarHamburgerProps) => {
+  const linksList: LinksList[] = [
+    { href: './', text: home },
+    { href: '/about', text: about },
+    { href: '/projects', text: projects },
+    { href: '/contact', text: contact },
+  ];
+
   return (
     <div
       className={`${
@@ -42,30 +54,17 @@ const NavbarMobile = ({
           <HamburgerIcon />
         </button>
       </div>
-      <Link
-        href='./'
-        className='border-b-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
-      >
-        {home}
-      </Link>
-      <Link
-        href='/about'
-        className='border-b-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
-      >
-        {about}
-      </Link>
-      <Link
-        href='/projects'
-        className='border-b-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
-      >
-        {projects}
-      </Link>
-      <Link
-        href='/contact'
-        className='border-b-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
-      >
-        {contact}
-      </Link>
+
+      {linksList.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          onClick={setOpen}
+          className='border-b-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
+        >
+          {link.text}
+        </Link>
+      ))}
 
       <div className='flex h-full w-auto flex-row items-end whitespace-nowrap'>
         <div className='flex w-full items-center border-t-[1px] border-lines'>
@@ -97,4 +96,4 @@ const NavbarMobile = ({
   );
 };
 
-export { NavbarMobile as NavbarHamburger };
+export { NavbarMobile };

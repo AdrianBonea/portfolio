@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import { Footer, Navbar } from '@/components';
-import { NextIntlClientProvider, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { NextFont } from 'next/dist/compiled/@next/font';
 
 import './globals.css';
 import 'remixicon/fonts/remixicon.css';
+import { ProviderManager } from '@/providers/providers';
 
 const fira: NextFont = Fira_Code({ subsets: ['latin'] });
 
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang={lang}>
       <body className={`${fira.className} w-full bg-primary-light`}>
-        <NextIntlClientProvider>
+        <ProviderManager>
           <Navbar
             title={t('Navbar.name')}
             home={t('Navbar.home')}
@@ -43,7 +44,7 @@ export default function RootLayout({
             design={t('Footer.design')}
             designer={t('Footer.designer')}
           />
-        </NextIntlClientProvider>
+        </ProviderManager>
       </body>
     </html>
   );

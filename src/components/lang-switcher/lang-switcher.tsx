@@ -20,7 +20,6 @@ export function LocaleSwitcher() {
             >
               <button
                 onClick={() => {
-                  console.log(locale);
                   router.push(pathname, { locale });
                 }}
               >

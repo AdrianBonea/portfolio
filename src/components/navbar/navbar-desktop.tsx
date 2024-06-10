@@ -74,4 +74,4 @@ const NavbarDesktop = ({
   );
 };
 
-export { NavbarDesktop as NavbarInHeader };
+export { NavbarDesktop };

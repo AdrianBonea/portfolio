@@ -3,8 +3,8 @@
 import { useScreenSize } from '@/hooks';
 import { useMenuStore } from '@/store';
 import { useEffect } from 'react';
-import { NavbarInHeader } from './navbar-desktop';
-import { NavbarHamburger } from './navbar-mobile';
+import { NavbarDesktop } from './navbar-desktop';
+import { NavbarMobile } from './navbar-mobile';
 
 type NavbarProps = {
   title: string;
@@ -38,7 +38,7 @@ export const Navbar = ({
     <nav
       className={`flex h-16 border-b-[1px] border-lines text-base font-[450] text-secondary-grey  ${isOpen ? 'h-screen flex-col' : 'flex-row'}`}
     >
-      <NavbarInHeader
+      <NavbarDesktop
         isOpen={isOpen}
         title={title}
         home={home}
@@ -48,7 +48,7 @@ export const Navbar = ({
         setOpen={setOpen}
       />
 
-      <NavbarHamburger
+      <NavbarMobile
         about={about}
         isOpen={isOpen}
         title={title}
