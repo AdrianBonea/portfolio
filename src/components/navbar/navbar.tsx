@@ -38,7 +38,7 @@ export const Navbar = ({
 
   return (
     <nav
-      className={`flex h-16 overflow-scroll border-b-[1px] border-lines text-base font-[450] text-secondary-grey  ${isOpen ? 'h-screen flex-col' : 'flex-row'}`}
+      className={`flex h-16  border-b-[1px] border-lines text-base font-[450] text-secondary-grey  ${isOpen ? 'h-screen flex-col' : 'flex-row'}`}
     >
       <NavbarDesktop
         isOpen={isOpen}

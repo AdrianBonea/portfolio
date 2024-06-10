@@ -45,7 +45,7 @@ const NavbarMobile = ({
     <div
       className={`${
         isOpen ? 'flex' : 'hidden'
-      } z-50 h-screen w-full flex-col bg-primary-light lg:hidden`}
+      } relative z-50 h-screen w-full flex-col bg-primary-light lg:hidden`}
     >
       <div className='flex w-full flex-row justify-between border-b-[1px] border-lines'>
         <h2 className='flex whitespace-nowrap border-lines py-5 pl-6 hover:cursor-default lg:border-r-[1px] lg:pr-40'>
@@ -72,7 +72,7 @@ const NavbarMobile = ({
         </Link>
       ))}
 
-      <div className='flex h-full w-auto flex-row items-end whitespace-nowrap'>
+      <div className='absolute bottom-0 flex  w-auto w-full flex-row items-end whitespace-nowrap'>
         <div
           className={`flex w-full items-center border-t-[1px] border-lines ${width < 768 && 'justify-between'}`}
         >
