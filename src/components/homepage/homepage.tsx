@@ -1,6 +1,7 @@
 'use server';
 
 import { gitHubLink } from '@/constants/homepage/constants';
+
 import { HomePageWrapper } from './homepage-wrapper';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
