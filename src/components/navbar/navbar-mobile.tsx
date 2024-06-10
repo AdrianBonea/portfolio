@@ -1,5 +1,5 @@
 import { gitProfileUrl, linkedinUrl } from '@/constants/Shared/urls';
-import { Link } from '@/navigation';
+import { Link, usePathname } from '@/navigation';
 
 import { HamburgerIcon } from '../icons/hamburger-icon';
 import { LocaleSwitcher } from '../lang-switcher/lang-switcher';
@@ -30,8 +30,10 @@ const NavbarMobile = ({
   contact,
   findMe,
 }: NavbarHamburgerProps) => {
+  const pathName = usePathname();
+
   const linksList: LinksList[] = [
-    { href: './', text: home },
+    { href: '/', text: home },
     { href: '/about', text: about },
     { href: '/projects', text: projects },
     { href: '/contact', text: contact },
@@ -60,7 +62,9 @@ const NavbarMobile = ({
           key={link.href}
           href={link.href}
           onClick={setOpen}
-          className='border-b-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white'
+          className={`border-b-[1px] ${
+            pathName === link.href ? 'border-b-accent-orange ' : 'border-lines '
+          } px-8 py-5 text-white hover:border-b-accent-orange`}
         >
           {link.text}
         </Link>
