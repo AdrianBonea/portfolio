@@ -36,9 +36,21 @@ export const Navbar = ({
     }
   }, [width]);
 
+  useEffect(() => {
+    const matchMedia = window.matchMedia('(max-width: 768px)'); // Adjust this value to your 'sm' breakpoint
+
+    if (isOpen && matchMedia.matches) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpen]);
+
+  console.log(isOpen, 'isOpen');
+
   return (
     <nav
-      className={`flex h-16  border-b-[1px] border-lines text-base font-[450] text-secondary-grey  ${isOpen ? 'h-screen flex-col' : 'flex-row'}`}
+      className={`flex h-16  border-b-[1px] border-lines text-base font-[450] text-secondary-grey  ${isOpen ? 'h-full flex-col' : 'flex-row'}`}
     >
       <NavbarDesktop
         isOpen={isOpen}
