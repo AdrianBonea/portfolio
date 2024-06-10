@@ -1,5 +1,5 @@
-import { NextIntlClientProvider } from 'next-intl';
 import React from 'react';
+import { NextIntlClientProvider } from 'next-intl';
 
 type ProviderManagerProps = {
   children: React.ReactNode;

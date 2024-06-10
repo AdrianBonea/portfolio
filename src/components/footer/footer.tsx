@@ -1,6 +1,8 @@
 import Link from 'next/link';
-import { LocaleSwitcher } from '../lang-switcher/lang-switcher';
+
 import { designUrl, gitUrl, linkedinUrl } from '@/constants/Shared/urls';
+
+import { LocaleSwitcher } from '../lang-switcher/lang-switcher';
 
 type GithubData = {
   url: string;

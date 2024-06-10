@@ -1,6 +1,7 @@
 'use client';
-import { usePathname, useRouter } from '@/navigation';
 import { useLocale } from 'next-intl';
+
+import { usePathname, useRouter } from '@/navigation';
 
 const locales: string[] = ['en', 'ro'];
 

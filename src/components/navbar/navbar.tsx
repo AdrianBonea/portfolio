@@ -1,8 +1,10 @@
 'use client';
 
+import { useEffect } from 'react';
+
 import { useScreenSize } from '@/hooks';
 import { useMenuStore } from '@/store';
-import { useEffect } from 'react';
+
 import { NavbarDesktop } from './navbar-desktop';
 import { NavbarMobile } from './navbar-mobile';
 

@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
-import { Fira_Code } from 'next/font/google';
-import { Footer, Navbar } from '@/components';
-import { useTranslations } from 'next-intl';
 import { NextFont } from 'next/dist/compiled/@next/font';
+import { Fira_Code } from 'next/font/google';
+import { useTranslations } from 'next-intl';
+
+import { Footer, Navbar } from '@/components';
+import { ProviderManager } from '@/providers/providers';
 
 import './globals.css';
 import 'remixicon/fonts/remixicon.css';
-import { ProviderManager } from '@/providers/providers';
 
 const fira: NextFont = Fira_Code({ subsets: ['latin'] });
 

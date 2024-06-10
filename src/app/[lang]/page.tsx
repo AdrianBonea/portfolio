@@ -1,5 +1,6 @@
-import { Homepage } from '@/components';
 import { useTranslations } from 'next-intl';
+
+import { Homepage } from '@/components';
 
 export default function Page() {
   const t = useTranslations();

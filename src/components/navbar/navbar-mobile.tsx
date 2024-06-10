@@ -1,8 +1,8 @@
 import { gitProfileUrl, linkedinUrl } from '@/constants/Shared/urls';
-
-import { LocaleSwitcher } from '../lang-switcher/lang-switcher';
-import { HamburgerIcon } from '../icons/hamburger-icon';
 import { Link } from '@/navigation';
+
+import { HamburgerIcon } from '../icons/hamburger-icon';
+import { LocaleSwitcher } from '../lang-switcher/lang-switcher';
 
 type NavbarHamburgerProps = {
   isOpen: boolean;

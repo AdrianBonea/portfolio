@@ -1,4 +1,5 @@
 import { Link } from '@/navigation';
+
 import { HamburgerIcon } from '../icons/hamburger-icon';
 
 type NavbarInHeaderProps = {

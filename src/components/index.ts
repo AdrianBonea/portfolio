@@ -1,4 +1,4 @@
-export { Homepage } from './homepage/homepage';
-export { HambugerMenu } from './hamburger-menu/hamburger-menu';
-export { Navbar } from './navbar/navbar';
 export { Footer } from './footer/footer';
+export { HambugerMenu } from './hamburger-menu/hamburger-menu';
+export { Homepage } from './homepage/homepage';
+export { Navbar } from './navbar/navbar';
