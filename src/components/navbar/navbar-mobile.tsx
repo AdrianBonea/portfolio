@@ -1,4 +1,5 @@
 import { gitProfileUrl, linkedinUrl } from '@/constants/Shared/urls';
+import { useScreenSize } from '@/hooks';
 import { Link, usePathname } from '@/navigation';
 
 import { HamburgerIcon } from '../icons/hamburger-icon';
@@ -31,6 +32,7 @@ const NavbarMobile = ({
   findMe,
 }: NavbarHamburgerProps) => {
   const pathName = usePathname();
+  const width: number = useScreenSize().width;
 
   const linksList: LinksList[] = [
     { href: '/', text: home },
@@ -71,25 +73,32 @@ const NavbarMobile = ({
       ))}
 
       <div className='flex h-full w-auto flex-row items-end whitespace-nowrap'>
-        <div className='flex w-full items-center border-t-[1px] border-lines'>
-          <h2 className='flex h-10 items-center self-center px-4 py-2 hover:cursor-default'>
-            {findMe}
-          </h2>
-          <Link
-            target={'_blank'}
-            href={linkedinUrl}
-            className='h-10 items-center border-l-[1px] border-r-[1px] border-lines '
-          >
-            <i className='ri-linkedin-box-fill flex h-10 items-center  px-4 py-1 text-3xl hover:text-white'></i>
-          </Link>
+        <div
+          className={`flex w-full items-center border-t-[1px] border-lines ${width < 768 && 'justify-between'}`}
+        >
+          {width > 768 && (
+            <h2 className='flex h-10 items-center self-center px-4 py-2 hover:cursor-default'>
+              {findMe}
+            </h2>
+          )}
 
-          <Link
-            target={'_blank'}
-            href={gitProfileUrl}
-            className='h-10 items-center  border-r-[1px] border-lines '
-          >
-            <i className='ri-github-fill flex h-10 items-center px-4 py-1 text-3xl hover:text-white'></i>
-          </Link>
+          <div className='flex flex-row'>
+            <Link
+              target={'_blank'}
+              href={linkedinUrl}
+              className='h-10 items-center border-l-[1px] border-r-[1px] border-lines '
+            >
+              <i className='ri-linkedin-box-fill flex h-10 items-center  px-4 py-1 text-3xl hover:text-white'></i>
+            </Link>
+
+            <Link
+              target={'_blank'}
+              href={gitProfileUrl}
+              className='h-10 items-center  border-r-[1px] border-lines '
+            >
+              <i className='ri-github-fill flex h-10 items-center px-4 py-1 text-3xl hover:text-white'></i>
+            </Link>
+          </div>
 
           <div className='flex h-10 w-auto flex-row items-center whitespace-nowrap'>
             <LocaleSwitcher />
