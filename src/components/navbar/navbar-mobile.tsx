@@ -1,3 +1,5 @@
+'use client';
+
 import { gitProfileUrl, linkedinUrl } from '@/constants/Shared/urls';
 import { useScreenSize } from '@/hooks';
 import { Link, usePathname } from '@/navigation';
@@ -19,6 +21,7 @@ type NavbarHamburgerProps = {
 type LinksList = {
   href: string;
   text: string;
+  underConstruction: boolean;
 };
 
 const NavbarMobile = ({
@@ -32,13 +35,13 @@ const NavbarMobile = ({
   findMe,
 }: NavbarHamburgerProps) => {
   const pathName = usePathname();
-  const width: number = useScreenSize().width;
+  const width = useScreenSize().width;
 
   const linksList: LinksList[] = [
-    { href: '/', text: home },
-    { href: '/about', text: about },
-    { href: '/projects', text: projects },
-    { href: '/contact', text: contact },
+    { href: '/', text: home, underConstruction: false },
+    { href: '/about', text: about, underConstruction: true },
+    { href: '/projects', text: projects, underConstruction: true },
+    { href: '/contact', text: contact, underConstruction: false },
   ];
 
   return (
@@ -64,8 +67,12 @@ const NavbarMobile = ({
           key={link.href}
           href={link.href}
           onClick={setOpen}
+          aria-disabled={link.underConstruction}
+          tabIndex={link.underConstruction ? -1 : undefined}
           className={`border-b-[1px] ${
             pathName === link.href ? 'border-b-accent-orange ' : 'border-lines '
+          } ${
+            link.underConstruction && 'pointer-events-none opacity-50'
           } px-8 py-5 text-white hover:border-b-accent-orange`}
         >
           {link.text}

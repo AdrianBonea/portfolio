@@ -1,9 +1,18 @@
-'use client';
+import { useEffect, useState } from 'react';
 
-import { useEffect,useState } from 'react';
+type ScreenSize = {
+  width: number;
+  height: number;
+};
 
 const useScreenSize = () => {
-  const [screenSize, setScreenSize] = useState({
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const [screenSize, setScreenSize] = useState<ScreenSize>({
     width: 0,
     height: 0,
   });
@@ -16,11 +25,12 @@ const useScreenSize = () => {
       });
     };
 
-    window.addEventListener('resize', handleResize);
+    const resizeObserver = new ResizeObserver(handleResize);
+    resizeObserver.observe(document.body);
 
-    // Clean up the event listener when the component unmounts
+    // Clean up the observer when the component unmounts
     return () => {
-      window.removeEventListener('resize', handleResize);
+      resizeObserver.disconnect();
     };
   }, []);
 

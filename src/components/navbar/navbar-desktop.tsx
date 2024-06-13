@@ -37,13 +37,17 @@ const NavbarDesktop = ({
         </Link>
         <Link
           href='/about'
-          className='hidden border-r-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white lg:flex'
+          className='pointer-events-none hidden border-r-[1px] border-lines px-8 py-5 opacity-50 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white lg:flex'
+          aria-disabled={true}
+          tabIndex={-1}
         >
           {about}
         </Link>
         <Link
           href='./projects'
-          className='hidden border-r-[1px] border-lines px-8 py-5 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white lg:flex'
+          className='pointer-events-none hidden border-r-[1px] border-lines px-8 py-5 opacity-50 hover:border-b-[2px] hover:border-b-accent-orange hover:text-white lg:flex'
+          aria-disabled={true}
+          tabIndex={-1}
         >
           {projects}
         </Link>
